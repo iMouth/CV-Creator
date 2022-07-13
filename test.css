@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+  margin: 2rem auto;
+  outline: 2px solid black;
+  padding: 1.5rem;
+  box-shadow: 2px 2px 2px black;
+}
+
+/* Personal Info */
+
+.personal-info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+}
+
+.name > p {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.personal-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Education */
+
+.education-info {
+  border-bottom: 2px solid black;
+  padding: 0.3rem 0;
+}
+
+.education-info * {
+  margin: 0.3rem 0;
+}
+
+.univeristy-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.major-info {
+  display: flex;
+  gap: 10px;
+}
+
+/* Professional Experience */
+
+.professional-info {
+  border-bottom: 2px solid black;
+  padding: 0.3rem 0;
+}
+
+.professional-info * {
+  margin: 0.3rem 0;
+}
+
+.professional-info > div {
+  margin-bottom: 1rem;
+}
+
+.experience-info {
+  display: flex;
+  gap: 10px;
+}
+.experience-info > :last-child {
+  margin-left: auto;
+}
+
+/* Projects */
+
+.project-info {
+  border-bottom: 2px solid black;
+  padding: 0.3rem 0;
+}
+
+.project-info * {
+  margin: 0.3rem 0;
+}
+
+.project {
+  display: flex;
+  gap: 10px;
+}
+
+.project-info > div {
+  margin-bottom: 1rem;
+}
+
+/* Skills */
+
+.tech-skills * {
+  margin: 0.5rem 0;
+}
+
+/* Print */
+
+@media print {
+  .wrapper {
+    width: auto;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+  }
+}
