@@ -1,15 +1,64 @@
 import React from "react";
 
-const ProjectItems = ({ project, del }) => {
+const ProjectItems = ({ project, del, change }) => {
   const experienceList = project.map((proj) => (
-    <div>
-      <input type="text" placeholder="Project Title" />
-      <input type="text" placeholder="Link" />
-      <input type="text" placeholder="Description" />
-      <input type="text" placeholder="Description" />
-      <input type="text" placeholder="Description" />
-      <input type="text" placeholder="Description" />
-      <input type="text" placeholder="Description" />
+    <div key={proj.id}>
+      <input
+        name="title"
+        type="text"
+        placeholder="Project Title"
+        onChange={(e) => {
+          change(e, proj);
+        }}
+      />
+      <input
+        name="link"
+        type="text"
+        placeholder="Link"
+        onChange={(e) => {
+          change(e, proj);
+        }}
+      />
+      <input
+        name="desc1"
+        type="text"
+        placeholder="Description"
+        onChange={(e) => {
+          change(e, proj);
+        }}
+      />
+      <input
+        name="desc2"
+        type="text"
+        placeholder="Description"
+        onChange={(e) => {
+          change(e, proj);
+        }}
+      />
+      <input
+        name="desc3"
+        type="text"
+        placeholder="Description"
+        onChange={(e) => {
+          change(e, proj);
+        }}
+      />
+      <input
+        name="desc4"
+        type="text"
+        placeholder="Description"
+        onChange={(e) => {
+          change(e, proj);
+        }}
+      />
+      <input
+        name="desc5"
+        type="text"
+        placeholder="Description"
+        onChange={(e) => {
+          change(e, proj);
+        }}
+      />
       <button value="Hello" type="button" onClick={() => del(proj)}>
         Delete
       </button>

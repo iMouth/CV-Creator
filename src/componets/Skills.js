@@ -1,28 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Skills extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      languages: [],
-      tools: [],
-      tech: [],
-    };
-  }
-
-  render() {
-    return (
-      <div className="skills-box">
-        <p>Skills</p>
-        <div>
-          <input type="text" placeholder="Languages" />
-          <input type="text" placeholder="Frameworks" />
-          <input type="text" placeholder="Tools" />
-        </div>
+const Skills = ({ change }) => {
+  return (
+    <div className="skills-box">
+      <p>Skills</p>
+      <div>
+        <input name="languages" type="text" placeholder="Languages" onChange={change} />
+        <input name="frameworks" type="text" placeholder="Frameworks" onChange={change} />
+        <input name="tools" type="text" placeholder="Tools" onChange={change} />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Skills;

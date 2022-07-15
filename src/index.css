@@ -2,9 +2,12 @@
   display: flex;
   justify-content: center;
   margin: 2rem;
+  gap: 40px;
 }
 
 .content-box {
+  display: flex;
+  flex-direction: column;
   border: 2px solid black;
   padding: 1rem;
   border-radius: 10px;
@@ -12,6 +15,8 @@
 
 .content-box > div > p {
   font-size: 1.3rem;
+  margin: 0 auto;
+  padding: 1rem 0;
 }
 
 .personal-box > div,
@@ -27,8 +32,14 @@
 
 .experience-box > div,
 .project-box > div {
-  margin: 2rem 0;
+  margin: 0 0 1rem 0;
 }
 .content-box > div > button {
   margin: 0.5rem 0;
+}
+
+@media print {
+  .content-box {
+    display: none;
+  }
 }

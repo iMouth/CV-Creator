@@ -1,19 +1,20 @@
-body {
-  margin: 0;
+h1 {
+  font-size: 1.1rem;
 }
 
-h1 {
-  font-size: 1.2rem;
+li:empty {
+  display: none;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   width: 50rem;
-  margin: 2rem auto;
+  margin: 0 auto;
   outline: 2px solid black;
   padding: 1.5rem;
   box-shadow: 2px 2px 2px black;
+  height: fit-content;
 }
 
 /* Personal Info */
@@ -58,6 +59,10 @@ h1 {
   justify-content: space-between;
 }
 
+.univeristy-info > p {
+  font-weight: bold;
+}
+
 .major-info {
   display: flex;
   gap: 10px;
@@ -82,6 +87,13 @@ h1 {
   display: flex;
   gap: 10px;
 }
+.experience-info > p:first-child {
+  font-weight: bold;
+}
+.experience-info > p:last-child {
+  font-weight: bold;
+}
+
 .experience-info > :last-child {
   margin-left: auto;
 }
@@ -100,6 +112,10 @@ h1 {
 .project {
   display: flex;
   gap: 10px;
+}
+
+.project > p {
+  font-weight: bold;
 }
 
 .project-info > div {

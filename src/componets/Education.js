@@ -1,32 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Education extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      college: "",
-      major: "",
-      graduation: "",
-      gpa: "",
-      location: "",
-    };
-  }
-
-  render() {
-    return (
-      <div className="education-box">
-        <p>Education</p>
-        <div>
-          <input id="college" type="text" placeholder="College" />
-          <input id="major" type="text" placeholder="Major" />
-          <input id="graduation" type="text" placeholder="Graducation Date" />
-          <input id="gpa" type="text" placeholder="GPA" />
-          <input id="location" type="text" placeholder="Location" />
-        </div>
+const Education = ({ change }) => {
+  return (
+    <div className="education-box">
+      <p>Education</p>
+      <div>
+        <input name="college" type="text" placeholder="College" onChange={change} />
+        <input name="major" type="text" placeholder="Major" onChange={change} />
+        <input name="graduation" type="text" placeholder="Graducation Date" onChange={change} />
+        <input name="gpa" type="text" placeholder="GPA" onChange={change} />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Education;
