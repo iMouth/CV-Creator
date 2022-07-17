@@ -3,7 +3,6 @@ import "../styles/test.css";
 
 const Preview = (props) => {
   const text = props.state;
-
   const projects = text.project.map((project) => {
     return (
       <div key={project.id}>
