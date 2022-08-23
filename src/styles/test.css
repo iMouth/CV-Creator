@@ -131,7 +131,7 @@ li:empty {
 
 @media print {
   .wrapper {
-    width: auto;
+    width: 100%;
     outline: none;
     box-shadow: none;
     padding: 0;

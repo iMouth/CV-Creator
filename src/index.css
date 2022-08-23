@@ -42,4 +42,8 @@
   .content-box {
     display: none;
   }
+
+  .App {
+    margin: 0;
+  }
 }
