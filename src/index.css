@@ -38,6 +38,25 @@
   margin: 0.5rem 0;
 }
 
+@media screen and (max-width: 1400px) {
+  .App {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .content-box {
+    width: calc(100% - 2rem);
+  }
+
+  .personal-box > div,
+  .education-box > div,
+  .experience-box > div,
+  .project-box > div,
+  .skills-box > div {
+    width: 100%;
+  }
+}
+
 @media print {
   .content-box {
     display: none;

@@ -21,7 +21,7 @@ const App = () => {
     graduation: "Aug 2019 - May 2023",
     gpa: "3.65",
     languages: "Java, Python, Javasript/HTML/CSS, Bash, SQL",
-    tools: "Node.js, React, Expres.js",
+    tools: "Node.js, React, Express.js",
     frameworks: "Github/Git, Intelliji, AWS, Docker",
     project: [],
     experience: [],
