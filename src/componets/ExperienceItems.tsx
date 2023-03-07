@@ -1,6 +1,13 @@
 import React from "react";
+import { ExperienceIF } from "./types";
 
-const ExperienceItems = ({ experience, del, change }) => {
+interface Props {
+  experience: ExperienceIF[];
+  del: (index: ExperienceIF) => void;
+  change: (e: React.ChangeEvent<HTMLInputElement>, index: ExperienceIF) => void;
+}
+
+const ExperienceItems = ({ experience, del, change }: Props) => {
   const experienceList = experience.map((exp) => (
     <div key={exp.id}>
       <input

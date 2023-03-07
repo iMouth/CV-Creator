@@ -1,6 +1,13 @@
 import React from "react";
+import { ProjectIF } from "./types";
 
-const ProjectItems = ({ project, del, change }) => {
+interface Props {
+  project: ProjectIF[];
+  del: (index: ProjectIF) => void;
+  change: (e: React.ChangeEvent<HTMLInputElement>, index: ProjectIF) => void;
+}
+
+const ProjectItems = ({ project, del, change }: Props) => {
   const experienceList = project.map((proj) => (
     <div key={proj.id}>
       <input

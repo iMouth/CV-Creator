@@ -6,10 +6,11 @@ import PersonalDetails from "./componets/PersonalDetails";
 import Projects from "./componets/Projects";
 import Skills from "./componets/Skills";
 import Preview from "./componets/Preview";
+import { ProjectIF, ExperienceIF, InfoIF } from "./componets/types";
 import uniqid from "uniqid";
 
 const App = () => {
-  const info = {
+  const info: InfoIF = {
     name: "John Doe",
     phone: "123-456-7890",
     email: "johndoe@gmail.com",
@@ -23,14 +24,15 @@ const App = () => {
     languages: "Java, Python, Javasript/HTML/CSS, Bash, SQL",
     tools: "Node.js, React, Express.js",
     frameworks: "Github/Git, Intelliji, AWS, Docker",
-    project: [],
-    experience: [],
+    project: Array<ProjectIF>(),
+    experience: Array<ExperienceIF>(),
   };
   const [state, setState] = useState(info);
 
-  const handleChange = (e) => setState({ ...state, [e.target.name]: e.target.value });
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setState({ ...state, [e.target.name]: e.target.value });
 
-  const getNewProject = () => {
+  const getNewProject = (): ProjectIF => {
     return {
       id: uniqid(),
       title: "",
@@ -43,15 +45,16 @@ const App = () => {
     };
   };
 
-  const onAddProject = (e) => {
+  const onAddProject = () => {
     setState({ ...state, project: state.project.concat(getNewProject()) });
   };
 
-  const deleteProject = (item) =>
+  const deleteProject = (item: ProjectIF) => {
     setState((prevState) => ({ ...state, project: prevState.project.filter((el) => el !== item) }));
+  };
 
-  const handleChangeArrayProject = (e, proj) => {
-    const projects = state.project;
+  const handleChangeArrayProject = (e: React.ChangeEvent<HTMLInputElement>, proj: ProjectIF) => {
+    const projects: any = state.project;
     const index = projects.indexOf(proj);
     const name = e.target.name;
     projects[index][name] = e.target.value;
@@ -61,7 +64,7 @@ const App = () => {
     });
   };
 
-  const getNewExperience = () => {
+  const getNewExperience = (): ExperienceIF => {
     return {
       id: uniqid(),
       position: "",
@@ -76,17 +79,18 @@ const App = () => {
     };
   };
 
-  const onAddExperience = (e) => {
+  const onAddExperience = () => {
     setState({ ...state, experience: state.experience.concat(getNewExperience()) });
   };
 
-  const deleteExperience = (item) =>
+  const deleteExperience = (item: ExperienceIF) =>
     setState((prevState) => ({ ...state, experience: prevState.experience.filter((el) => el !== item) }));
 
-  const handleChangeArrayExperience = (e, exp) => {
-    const experience = state.experience;
+  const handleChangeArrayExperience = (e: React.ChangeEvent<HTMLInputElement>, exp: ExperienceIF) => {
+    const experience:any = state.experience;
     const index = experience.indexOf(exp);
-    experience[index][e.target.name] = e.target.value;
+    const name = e.target.name;
+    experience[index][name] = e.target.value;
     setState({ ...state, experience: experience });
   };
 
