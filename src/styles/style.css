@@ -9,12 +9,18 @@ li:empty {
 .wrapper {
   display: flex;
   flex-direction: column;
-  width: calc(100% - 3rem);
+  width: calc(55% - 3rem);
   margin: 0 auto;
   outline: 2px solid black;
   padding: 1.5rem;
   box-shadow: 2px 2px 2px black;
   height: fit-content;
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    width: calc(100% - 3rem);
+  }
 }
 
 /* Personal Info */
@@ -36,10 +42,22 @@ li:empty {
   gap: 10px;
 }
 
+.contact > a {
+  text-decoration: none;
+  color: black;
+}
+
 .personal-links {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+}
+
+.personal-links > button {
+  flex-direction: row;
+  border: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 650px) {
@@ -135,6 +153,12 @@ li:empty {
 
 .project-info > div {
   margin-bottom: 1rem;
+}
+
+.project > button {
+  flex-direction: row;
+  border: none;
+  cursor: pointer;
 }
 
 /* Skills */
