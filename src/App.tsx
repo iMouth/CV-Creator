@@ -6,27 +6,11 @@ import PersonalDetails from "./componets/PersonalDetails";
 import Projects from "./componets/Projects";
 import Skills from "./componets/Skills";
 import Preview from "./componets/Preview";
-import { ProjectIF, ExperienceIF, InfoIF } from "./componets/types";
+import { ProjectIF, ExperienceIF } from "./componets/types";
+import { info } from "./componets/info";
 import uniqid from "uniqid";
 
 const App = () => {
-  const info: InfoIF = {
-    name: "John Doe",
-    phone: "123-456-7890",
-    email: "johndoe@gmail.com",
-    website: "www.johndoe.com",
-    linkedin: "lindin.com/ln/johndoe",
-    github: "github.com/johndoe",
-    college: "Univerisity of California",
-    major: "BS Computer Science",
-    graduation: "Aug 2019 - May 2023",
-    gpa: "3.65",
-    languages: "Java, Python, Javasript/HTML/CSS, Bash, SQL",
-    tools: "Node.js, React, Express.js",
-    frameworks: "Github/Git, Intelliji, AWS, Docker",
-    project: Array<ProjectIF>(),
-    experience: Array<ExperienceIF>(),
-  };
   const [state, setState] = useState(info);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
@@ -87,7 +71,7 @@ const App = () => {
     setState((prevState) => ({ ...state, experience: prevState.experience.filter((el) => el !== item) }));
 
   const handleChangeArrayExperience = (e: React.ChangeEvent<HTMLInputElement>, exp: ExperienceIF) => {
-    const experience:any = state.experience;
+    const experience: any = state.experience;
     const index = experience.indexOf(exp);
     const name = e.target.name;
     experience[index][name] = e.target.value;

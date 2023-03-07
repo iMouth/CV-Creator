@@ -29,7 +29,7 @@ const ExperienceItems = ({ experience, del, change }: Props) => {
       <input
         name="location"
         type="text"
-        placeholder="location"
+        placeholder="Location"
         onChange={(e) => {
           change(e, exp);
         }}
