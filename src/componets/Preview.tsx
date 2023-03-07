@@ -1,7 +1,12 @@
 import React from "react";
-import "../styles/test.css";
+import "../styles/style.css";
+import { InfoIF } from "./types"
 
-const Preview = (props) => {
+interface Props {
+  state: InfoIF;
+}
+
+const Preview = (props: Props) => {
   const text = props.state;
   const projects = text.project.map((project) => {
     return (

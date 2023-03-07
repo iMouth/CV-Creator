@@ -1,6 +1,10 @@
 import React from "react";
 
-const Skills = ({ change }) => {
+interface Props {
+  change: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const Skills = ({ change }: Props) => {
   return (
     <div className="skills-box">
       <p>Skills</p>

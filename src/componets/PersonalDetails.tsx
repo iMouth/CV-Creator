@@ -1,6 +1,10 @@
 import React from "react";
 
-const PersonalDetails = ({ change }) => {
+interface Props {
+  change: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const PersonalDetails = ({ change }: Props) => {
   return (
     <div className="personal-box">
       <p>Personal Details</p>
