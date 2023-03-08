@@ -1,7 +1,7 @@
 {
   "name": "cv-project",
   "version": "0.1.0",
-  "homepage": "https://iMouth.github.io/react-gh-pages",
+  "homepage": "https://imouth.github.io/CV-Creator",
   "private": true,
   "main": "src/index.tsx",
   "dependencies": {
